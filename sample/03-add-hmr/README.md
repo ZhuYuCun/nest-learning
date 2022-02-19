@@ -35,6 +35,7 @@ module.exports = function (options, webpack) {
 
 #### 在根方法中调用
 新增以下几行
+`main.ts`
 ``` ts
 + declare const module: any;
 
