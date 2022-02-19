@@ -2,9 +2,13 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { PhotoModule } from './photo/photo.module';
+import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
+    PhotoModule,
+    UsersModule,
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: 'localhost',
@@ -12,7 +16,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       username: 'root',
       password: 'zyc1716ZYC',
       database: 'nestDB',
-      entities: [],
+      autoLoadEntities: true,
       synchronize: true,
     })
   ],
