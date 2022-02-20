@@ -19,3 +19,12 @@ $ nest new project-name
 │   ├── app.service.ts
 │   └── main.ts
 开发目录在`src`下面，main.ts是整个项目的入口文件。nest是基于express开发的。
+
+app.module.ts  
+根目录，整个项目的入口，
+有@Module装饰器装饰的类是模块，整个类是模块的入口，要把控制器、服务等注册到这个装饰器里  
+
+@Injectable装饰服务，把服务变成一个可注入的类
+
+
+@Controller装饰的类是控制器，服务可注入到控制器使用  

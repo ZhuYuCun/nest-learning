@@ -5,7 +5,8 @@ import { UpdateBannerDto } from './dto/update-banner.dto';
 @Injectable()
 export class BannerService {
   create(createBannerDto: CreateBannerDto) {
-    return 'This action adds a new banner';
+    let str = JSON.stringify(createBannerDto)
+    return 'This action adds a new banner' + `${str}`;
   }
 
   findAll() {
